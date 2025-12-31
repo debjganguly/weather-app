@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Page title shown on browser tab -->
+  <title>Weather App</title>
+
+  <!-- Link external CSS for styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="night">
+  <!-- Main card that holds the entire app -->
+  <div class="app">
+
+    <!-- App heading -->
+    <h1 id="app-title">Hello Weather</h1>
+
+    <!-- Input where user types city name -->
+    <input type="text" id="city-input" placeholder="Enter city name">
+
+    <!-- Button that triggers weather fetch -->
+    <button id="search-btn">Get Weather</button>
+
+    <!-- Message area for errors or instructions -->
+    <div id="message"></div>
+
+    <!-- Loading text shown while data is being fetched -->
+    <div id="loading" class="loading">Loading weather…</div>
+
+    <!-- Grid that shows weather data (hidden until data arrives) -->
+    <div id="weather-grid">
+
+      <!-- City box -->
+      <div class="weather-box">
+        <div class="icon">📍</div>
+        <span class="label">City</span>
+        <span id="city-name" class="value"></span>
+      </div>
+
+      <!-- Temperature box -->
+      <div class="weather-box">
+        <div class="icon">🌡️</div>
+        <span class="label">Temperature</span>
+        <span id="temperature" class="value"></span>
+      </div>
+
+      <!-- Wind box -->
+      <div class="weather-box">
+        <div class="icon">💨</div>
+        <span class="label">Wind</span>
+        <span id="wind" class="value"></span>
+      </div>
+
+      <!-- Humidity box -->
+      <div class="weather-box">
+        <div class="icon">💧</div>
+        <span class="label">Humidity</span>
+        <span id="humidity" class="value"></span>
+      </div>
+
+      <!-- Weather condition box -->
+      <div class="weather-box">
+        <div class="icon" id="condition-icon">🌥️</div>
+        <span class="label">Condition</span>
+        <span id="condition" class="value"></span>
+      </div>
+
+      <!-- Rain chance box -->
+      <div class="weather-box">
+        <div class="icon">☔</div>
+        <span class="label">Rain chance</span>
+        <span id="precipitation" class="value"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript loaded at end so DOM is ready -->
+  <script src="script.js"></script>
+</body>
+</html>
